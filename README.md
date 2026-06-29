@@ -1,129 +1,198 @@
-# Eau Gallie Medical Center Website
+# Eau Gallie Medical Center Website & Joke Generator
 
-A modern, professional website for Eau Gallie Medical Center built with HTML, CSS, and JavaScript.
+A collection of web projects including a professional medical center website and an interactive joke generator.
 
-## Features
+## 🏥 Projects
 
-### Pages & Sections
-- **Navigation Bar** - Sticky navigation with mobile hamburger menu
-- **Hero Section** - Eye-catching introduction with call-to-action buttons
-- **Statistics** - Key metrics about the medical center
-- **Services** - Comprehensive list of medical services offered
-- **Medical Team** - Profiles of healthcare professionals
-- **About Us** - Background and information about the center
-- **Contact** - Contact information and inquiry form
-- **Footer** - Social links and quick navigation
+### 1. Medical Center Website
+The main professional website for Eau Gallie Medical Center.
 
-### Functionality
-- ✅ Fully Responsive Design (Mobile, Tablet, Desktop)
-- ✅ Smooth Scrolling Navigation
-- ✅ Mobile-Friendly Hamburger Menu
-- ✅ Active Navigation Highlighting on Scroll
-- ✅ Contact Form with Validation
-- ✅ Scroll Animations
-- ✅ Modern UI with Gradient Backgrounds
-- ✅ Accessible Design
+**Files:**
+- `index.html` - Main website
+- `styles.css` - Professional styling
+- `script.js` - Interactive features
 
-### Services Highlighted
-- Cardiology
-- Neurology
-- Surgery
-- Pediatrics
-- Pulmonology
-- General Medicine
+**Link:** [🔗 Open Medical Center Website](https://rawcdn.githack.com/brookewolf/eaugalliemed/main/index.html)
 
-## File Structure
+---
 
-```
-├── index.html      # Main HTML file
-├── styles.css      # Complete stylesheet with responsive design
-├── script.js       # Interactive JavaScript functionality
-└── README.md       # Documentation
-```
+### 2. Random Joke Generator
+An interactive joke generator powered by the JokeAPI external API with favorites functionality.
 
-## Installation
+**Files:**
+- `joke-generator.html` - Main joke generator app
+- `joke-styles.css` - Joke app styling
+- `joke-script.js` - Joke generator logic
 
+**Link:** [🔗 Open Joke Generator](https://rawcdn.githack.com/brookewolf/eaugalliemed/main/joke-generator.html)
+
+---
+
+## 🎯 Joke Generator Features
+
+✨ **Features:**
+- 🎲 Fetch random jokes from JokeAPI
+- 📂 Multiple categories (General, Programming, Knock-Knock)
+- ❤️ Save favorite jokes to localStorage
+- 📋 Copy jokes to clipboard
+- 📤 Share jokes via Web Share API
+- 📊 Track statistics (jokes loaded, favorites)
+- 🎨 Beautiful gradient UI with animations
+- 📱 Fully responsive design
+- ⌨️ Keyboard shortcuts (Enter to get joke, Ctrl+F to favorite)
+
+**Categories Available:**
+- General
+- Programming
+- Knock-Knock
+
+**API Used:** [JokeAPI v2](https://v2.jokeapi.dev/)
+
+---
+
+## 🏥 Medical Center Website Features
+
+✨ **Features:**
+- 🏥 Professional healthcare branding
+- 📋 Service showcase (Cardiology, Neurology, Surgery, etc.)
+- 👨‍⚕️ Medical team profiles
+- 📞 Contact information & form
+- 📱 Fully responsive design
+- 🎨 Modern gradient UI
+- ⚡ Smooth animations
+- 🌐 Professional navigation
+
+---
+
+## 🚀 Getting Started
+
+### View Online
+Click the links above to view the websites directly in your browser.
+
+### Run Locally
 1. Clone the repository:
 ```bash
 git clone https://github.com/brookewolf/eaugalliemed.git
 cd eaugalliemed
 ```
 
-2. Open the website:
-- Simply open `index.html` in your web browser
-- Or serve using a local server:
+2. Open in browser:
 ```bash
+# Option 1: Direct open
+open index.html
+
+# Option 2: Using Python
 python -m http.server 8000
 # Visit http://localhost:8000
+
+# Option 3: Using Node.js
+npx http-server
 ```
 
-## Customization
+---
 
-### Update Contact Information
-Edit the contact section in `index.html`:
-- Address
-- Phone numbers
-- Email addresses
+## 📁 Project Structure
+
+```
+eaugalliemed/
+├── index.html                 # Medical center website
+├── styles.css                 # Medical site styling
+├── script.js                  # Medical site functionality
+├── joke-generator.html        # Joke generator app
+├── joke-styles.css            # Joke app styling
+├── joke-script.js             # Joke generator logic
+└── README.md                  # This file
+```
+
+---
+
+## 🎨 Customization
+
+### Medical Center Website
+Edit `index.html` to customize:
+- Contact information
+- Doctor profiles
+- Services offered
 - Business hours
+- Logo and branding
 
-### Modify Medical Team
-Update the doctor profiles in the "Meet Our Medical Team" section with actual staff information and photos.
+### Joke Generator
+Edit `joke-script.js` to:
+- Change API endpoints
+- Add more joke categories
+- Modify notification styles
+- Adjust animation speeds
 
-### Add Your Logo
-Replace the icon in the navigation bar with your medical center logo.
+---
 
-### Update Colors
-Modify CSS variables in `styles.css`:
-```css
-:root {
-    --primary-color: #0066cc;
-    --secondary-color: #00a86b;
-    --accent-color: #ff6b35;
-    --dark-color: #1a1a1a;
-    --light-color: #f8f9fa;
-}
-```
+## 🔧 Technologies Used
 
-## Responsive Breakpoints
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styling with gradients and animations
+- **Vanilla JavaScript** - No frameworks required
+- **External API** - JokeAPI v2
+- **Font Awesome** - Icons library
 
-- **Desktop**: 1200px and above
-- **Tablet**: 768px - 1199px
-- **Mobile**: Below 768px
-- **Small Mobile**: Below 480px
+---
 
-## Browser Support
+## 📱 Browser Support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
+- ✅ Chrome (latest)
+- ✅ Firefox (latest)
+- ✅ Safari (latest)
+- ✅ Edge (latest)
+- ✅ Mobile browsers
 
-## Performance Features
+---
 
-- Lightweight CSS with no external frameworks
-- Fast-loading images with proper optimization
-- Efficient JavaScript with no heavy dependencies
-- Mobile-first responsive design
-- Smooth animations and transitions
+## 💾 Data Storage
 
-## Future Enhancements
+The Joke Generator uses browser localStorage to save:
+- Favorite jokes
+- Statistics (jokes loaded count)
+- Selected category preference
 
-- Patient portal integration
-- Online appointment booking system
-- Doctor scheduling integration
-- Patient testimonials section
-- Blog for health tips
-- Multi-language support
-- Accessibility features (WCAG compliance)
-- SEO optimization
+No server-side storage required - all data stays on your device!
 
-## License
+---
+
+## 🌐 Live Links
+
+| Project | Link |
+|---------|------|
+| 🏥 Medical Center | [Open Website](https://rawcdn.githack.com/brookewolf/eaugalliemed/main/index.html) |
+| 😂 Joke Generator | [Open App](https://rawcdn.githack.com/brookewolf/eaugalliemed/main/joke-generator.html) |
+
+---
+
+## 🎓 Learning Resources
+
+This project demonstrates:
+- Fetching data from external APIs
+- DOM manipulation and event handling
+- CSS animations and transitions
+- Responsive web design
+- Local storage usage
+- Modern JavaScript practices
+
+---
+
+## 📝 License
 
 © 2024 Eau Gallie Medical Center. All rights reserved.
 
-## Support
+---
 
-For questions or assistance with the website, please contact:
-- Email: info@eaugalliemedical.com
-- Phone: (321) 555-0100
+## 👤 Author
+
+Created by brookewolf
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this repository and submit pull requests for improvements!
+
+---
+
+**Last Updated:** June 29, 2024
