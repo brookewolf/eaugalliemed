@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="joke-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-generator">
+            <div class="header">
+                <h1><i class="fas fa-laugh-beam"></i> Joke Generator</h1>
+                <p>Get a random laugh with a single click!</p>
+            </div>
+
+            <div class="joke-display" id="jokeDisplay">
+                <div class="loading" id="loading">
+                    <i class="fas fa-spinner"></i>
+                    <p>Loading a joke...</p>
+                </div>
+                <div class="joke-content hidden" id="jokeContent">
+                    <p class="joke-text" id="jokeText"></p>
+                    <p class="joke-category" id="jokeCategory"></p>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" id="getJokeBtn" onclick="getJoke()">
+                    <i class="fas fa-dice"></i> Get a Joke
+                </button>
+                <button class="btn btn-secondary" id="shareBtn" onclick="shareJoke()" disabled>
+                    <i class="fas fa-share-alt"></i> Share
+                </button>
+                <button class="btn btn-secondary" id="copyBtn" onclick="copyJoke()" disabled>
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+            </div>
+
+            <div class="category-selector">
+                <h3>Filter by Category:</h3>
+                <div class="category-buttons">
+                    <button class="category-btn active" onclick="setCategory('general')" data-category="general">
+                        All
+                    </button>
+                    <button class="category-btn" onclick="setCategory('programming')" data-category="programming">
+                        Programming
+                    </button>
+                    <button class="category-btn" onclick="setCategory('knock-knock')" data-category="knock-knock">
+                        Knock-Knock
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <i class="fas fa-laugh"></i>
+                    <span id="jokeCount">0</span>
+                    <p>Jokes Loaded</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-heart"></i>
+                    <span id="favoriteCount">0</span>
+                    <p>Favorites</p>
+                </div>
+            </div>
+
+            <div class="favorites-section">
+                <h3>
+                    <i class="fas fa-bookmark"></i> Favorite Jokes
+                    <button class="clear-btn" onclick="clearFavorites()">Clear All</button>
+                </h3>
+                <div class="favorites-list" id="favoritesList">
+                    <p class="empty-message">No favorite jokes yet. Click the heart to save!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="joke-script.js"></script>
+</body>
+</html>
